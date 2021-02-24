@@ -18,8 +18,8 @@ export enum AppRole {
 
 /** 用户 */
 export interface User {
-  id?: number;
-  userName: string;
+  id?: number; // 用户ID
+  userName: string; // 用户昵称
   realName: string;
   sex: Sex;
   age: number;
