@@ -21,7 +21,7 @@ export interface User {
   id?: number; // 用户ID
   userName: string; // 用户昵称
   realName: string; // 真实姓名
-  sex: Sex;
+  sex: Sex; // 性别
   age: number;
   password: string;
   tipQA: string;
