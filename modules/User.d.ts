@@ -42,3 +42,25 @@ export default interface User {
   token2?: string;
   token3?: string;
 }
+
+/** 添加用户接口入参 */
+export interface AddUserRequestOptions {
+  userName: string;
+  password: string;
+  passwordConfirm: string;
+  realName: string,
+  email?: string;
+  tipQA?: string;
+  email?: string;
+  phone?: string;
+  sex?: Sex; // 性别
+  age?: number;
+  adminRole?: AdminRole;
+  appRole?: AppRole;
+}
+/** 删除用户接口入参 */
+export interface DeleteUserRequestOptions {
+  id: number
+}
+
+// export interface AddUserResponseData User
