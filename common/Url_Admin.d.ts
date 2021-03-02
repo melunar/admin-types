@@ -4,4 +4,6 @@ export const enum AdminInterfaceUrlMapper {
   USER_LIST = '/user/list',
   USER_EDIT = '/user/edit',
   USER_DELETE = '/user/delete',
+  USER_LOGIN = '/user/login',
+  USER_LOGOUT = '/user/logout',
 }

@@ -62,5 +62,10 @@ export interface AddUserRequestOptions {
 export interface DeleteUserRequestOptions {
   id: number
 }
+/** 用户登陆接口入参 */
+export interface UserLoginRequestOptions {
+  userName: string;
+  password: string;
+}
 
 // export interface AddUserResponseData User
