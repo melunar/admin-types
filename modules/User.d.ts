@@ -58,8 +58,13 @@ export interface AddUserRequestOptions {
   adminRole?: AdminRole;
   appRole?: AppRole;
 }
+/** token接口入参 */
+export interface TokenRequestOptions {
+  token: string
+}
+
 /** 删除用户接口入参 */
-export interface DeleteUserRequestOptions {
+export interface DeleteUserRequestOptions extends TokenRequestOptions {
   id: number
 }
 /** 用户登陆接口入参 */
