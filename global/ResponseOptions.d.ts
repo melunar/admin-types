@@ -6,3 +6,9 @@ declare interface ResponseOptions<T> {
   data: T;
   [key: string]: any;
 }
+
+declare interface ProtocolConfig {
+  url: string;
+  method: 'get' | 'post';
+  token: boolean;
+}

@@ -51,7 +51,6 @@ export interface AddUserRequestOptions {
   realName: string,
   email?: string;
   tipQA?: string;
-  email?: string;
   phone?: string;
   sex?: Sex; // 性别
   age?: number;
