@@ -30,6 +30,17 @@ export namespace JA_PROTOCOL_SCHEMA {
     export interface REQUEST extends JA.UploadJAApplication {}
     export interface RESPONSE extends ResponseOptions<any> {}
   }
+  /** 项目列表 */
+  export namespace JA_SEARCH {
+    export interface REQUEST {
+      projectName?: string;
+      status?: JA.JAStatus;
+    }
+    export interface RESPONSE extends ResponseOptions<{
+      list: JA.JenkinsApplication[];
+      count: number;
+    }> {}
+  }
   /** 接受申请 */
   export namespace JA_RECEIVE {
     export interface REQUEST {
@@ -50,12 +61,19 @@ export namespace JA_PROTOCOL_SCHEMA {
 export const JA_PROTOCOL: {
   [JA_ADD]: ProtocolConfig;
   [JA_RECEIVE]: ProtocolConfig;
+  [JA_SEARCH]: ProtocolConfig;
   [JA_SUCCESS]: ProtocolConfig;
 } = {
   /** 新增 */
   [JA_ADD]: {
     url: '/add',
     method: 'post',
+    token: true
+  },
+  /** 查询 */
+  [JA_SEARCH]: {
+    url: '/search',
+    method: 'get',
     token: true
   },
   /** 接受申请 */

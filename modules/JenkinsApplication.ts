@@ -19,6 +19,7 @@ export namespace JA {
   /** 项目完整结构体 */
   export interface JenkinsApplication {
     _id?: string; /** _id */
+    userId?: number; /** 创建用户id */
     projectName: string; /** 项目名称 */
     orgName?: string; /** 组织名 */
     createSuccessTime?: number; /** 创建成功时间 */
@@ -34,6 +35,7 @@ export namespace JA {
   }
   /** 新增编辑上传结构 */
   export interface UploadJAApplication {
+    userId?: number; /** 创建用户id */
     projectName: string; /** 项目名称 */
     orgName?: string; /** 组织名 */
     priority?: JAExigencyStatus; /** 加急状态 */
