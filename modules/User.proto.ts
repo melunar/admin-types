@@ -21,8 +21,8 @@ export const USER_PROTOCOL: {
   [USER_LOGIN]: ProtocolConfig
 } = {
   /** 登陆 */
-  USER_LOGIN: {
-    url: '/user/login',
+  [USER_LOGIN]: {
+    url: '/login',
     method: 'post',
     token: false,
   }

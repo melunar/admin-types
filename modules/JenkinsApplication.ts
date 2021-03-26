@@ -18,6 +18,7 @@ export namespace JA {
   }
   /** 项目完整结构体 */
   export interface JenkinsApplication {
+    _id?: string; /** _id */
     projectName: string; /** 项目名称 */
     orgName?: string; /** 组织名 */
     createSuccessTime?: number; /** 创建成功时间 */
@@ -27,6 +28,16 @@ export namespace JA {
     description: string; /** 描述 */
     applyWriteBackMessage?: string; /** 回复信息 */
     token?: string; /** token */
+    repositoryURL: string; /** 项目地址 */
+    devDeployPath: string; /** 部署地址-dev */
+    masterDeployPath: string; /** 部署地址-master */
+  }
+  /** 新增编辑上传结构 */
+  export interface UploadJAApplication {
+    projectName: string; /** 项目名称 */
+    orgName?: string; /** 组织名 */
+    priority?: JAExigencyStatus; /** 加急状态 */
+    description: string; /** 描述 */
     repositoryURL: string; /** 项目地址 */
     devDeployPath: string; /** 部署地址-dev */
     masterDeployPath: string; /** 部署地址-master */
