@@ -1,5 +1,5 @@
 /** 业务接口错误码 */
-export const enum ResponseCodeEnum {
+export enum ResponseCodeEnum {
   SUCCESS = 200,
   RECEIVED = 100,
   USER_UNAUTHORIZED = 401, /** 用户未认证 */

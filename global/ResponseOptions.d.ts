@@ -1,4 +1,4 @@
-import ResponseCodeEnum from '../base/ResponseCodeEnum'
+import { ResponseCodeEnum } from '../common/ResponseCodeEnum'
 /** 接口数据格式 */
 declare interface ResponseOptions<T> {
   code: ResponseCodeEnum;
