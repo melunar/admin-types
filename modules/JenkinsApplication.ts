@@ -54,9 +54,13 @@ export namespace JA {
   }
   /** 构建日志 暂时不做 */
   export interface BuildLog {
-    userId: number;
-    projectName: string;
-    dateTime: number;
-    status: number;
+    userId: number; /** user id */
+    userName: string; /** user name */
+    projectId: string; /** 项目id */
+    projectName: string; /** 项目名 */
+    branch: string; /** 分支名 */
+    remark: string; /** 备注 */
+    dateTime: number; /** 发起构建日期 */
+    status: number; /** 0 */
   }
 }
