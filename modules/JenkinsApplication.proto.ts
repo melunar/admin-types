@@ -55,6 +55,18 @@ export namespace JA_PROTOCOL_SCHEMA {
     }
     export interface RESPONSE extends ResponseOptions<any> {}
   }
+  /** 构建 */
+  export namespace JA_BUILD {
+    export interface REQUEST {
+      branch: string;
+      projectName: string;
+      projectId: string;
+      remark: string;
+    }
+    export interface RESPONSE extends ResponseOptions<any> {
+      log: JA.BuildLog
+    }
+  }
 }
 
 /** 接口配置 */
@@ -63,6 +75,7 @@ export const JA_PROTOCOL: {
   [JA_RECEIVE]: ProtocolConfig;
   [JA_SEARCH]: ProtocolConfig;
   [JA_SUCCESS]: ProtocolConfig;
+  [JA_BUILD]: ProtocolConfig;
 } = {
   /** 新增 */
   [JA_ADD]: {
@@ -85,6 +98,12 @@ export const JA_PROTOCOL: {
   /** 标记成功 */
   [JA_SUCCESS]: {
     url: '/success',
+    method: 'post',
+    token: true
+  },
+  /** 构建 */
+  [JA_BUILD]: {
+    url: '/build',
     method: 'post',
     token: true
   },
