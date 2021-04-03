@@ -1,5 +1,6 @@
 /** Jenkins 应用 */
 
+// tslint:disable-next-line: no-namespace
 export namespace JA {
   /** 应用状态 */
   export enum JAStatus {
